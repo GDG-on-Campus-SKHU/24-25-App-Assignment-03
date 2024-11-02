@@ -4,7 +4,7 @@
 3차시 과제는 hw01, hw02 문제 2개입니다. 
 git fork을 이용해 과제 수행하시면 됩니다.
 VS Code를 사용하시거나, 아직 설치가 되어있지 않으신 분들은 DartPad를 사용하시면 됩니다.
-VS Code를 사용하시는 경우, main()이
+    ** VS Code를 사용하시는 경우, Run Without Debugging을 사용하시거나 Start Debugging을 사용하시는 경우, 출력이 안 될 수 있습니다. hw01과 hw02 해당 예제의 main()에서 run을 누르셔야 위 오류를 피할 수 있습니다. 
 아래는 출력 예시입니다. 
 - hw01 : 비동기 도서 관리 시스템 출력 예제
     - 책을 추가합니다: "Dart Programming" by Alice
