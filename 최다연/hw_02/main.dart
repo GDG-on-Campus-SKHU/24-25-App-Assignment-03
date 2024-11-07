@@ -2,8 +2,8 @@ import 'transportation.dart';
 import 'vehicle.dart';
 
 void main() {
-  Car bus = Car('bus', 60);
-  Car texi = Car('texi', 100);
+  Bus bus = Bus('bus', 60);
+  Texi texi = Texi('texi', 100);
   Car car = Car('car', 70);
 
   List<Vehicle> vehicle = [bus, texi, car];

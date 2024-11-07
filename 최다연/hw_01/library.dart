@@ -4,8 +4,8 @@ class Library {
   List<Book> books = [];
 
   Future<void> addBook(Book book) async {
-    books.add(book);
     await Future.delayed(Duration(seconds: 1));
+    books.add(book);
     print('책을 추가합니다: "${book.title}" by ${book.author}');
   }
 

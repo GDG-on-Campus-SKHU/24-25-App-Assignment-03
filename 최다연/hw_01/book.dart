@@ -1,8 +1,8 @@
 import 'dart:async';
 
 class Book {
-  final String? title;
-  final String? author;
+  final String title;
+  final String author;
   bool isAvailable = true;
 
   Book(this.title, this.author); //생성자
