@@ -1,0 +1,131 @@
+
+abstract class vehicle{
+  String name;
+  int speed;
+  
+ vehicle(this.name, this.speed);
+  
+  void move();
+  
+  
+  void info() {
+    print('$name가 시속 $speed km/h의 속도로 이동합니다.');
+  }
+}
+
+
+class car extends vehicle {
+  car(String name, int speed): super(name, speed);
+   @override
+  void move() {
+    print('$name가 도로 위를 달립니다.');
+  }  
+    void stop() {
+    speed = 0;
+    print('$name가 정지했습니다. 현재 속도 : $speed');
+  }
+
+  }
+
+
+
+class bicycle extends vehicle {
+  bicycle(String name, int speed):super(name, speed);
+  @override
+  void move() {
+    print('$name가 자전거 도로 위를 달립니다');
+  }
+}
+class airplane extends vehicle {
+  airplane(String name, int speed):super(name, speed);
+  @override
+  void move() {
+    print('$name가 하늘 위를 납니다');
+  }
+}
+
+
+void main() {
+  List<vehicle> vehicles = [
+    car("자동차", 70),
+    bicycle("자전거", 60),
+    airplane("비행기", 80),
+  ];
+
+ 
+  for (var vehicle in vehicles) {
+    vehicle.info();
+    vehicle.move();
+  }
+  
+  car owncar = car("자동차", 70);
+  owncar.info();
+  owncar.stop();
+
+}
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________________________________
+
+import 'dart:async';
+
+
+class Book {
+  String title;
+  String author;
+  bool isAvailable;
+
+  
+  Book(this.title, this.author, {this.isAvailable = true});
+
+  
+  Future<void> borrow() async {
+    print('대출을 시도 중입니다: $title');
+    await Future.delayed(Duration(seconds: 2));
+    if (isAvailable) {
+      isAvailable = false;
+      print('$title이 대출되었습니다.');
+    } else {
+      print('$title은 이미 대출 중입니다.');
+    }
+  }
+
+ 
+  Future<void> returnBook() async {
+    print('반납을 시도 중입니다: $title');
+    await 
+    Future.delayed(Duration(seconds: 1));
+    isAvailable = true;
+    print('$title이 반납되었습니다.');
+  }
+}
+
+
+class Library {
+  List<Book> books = [];
+
+
+  Future<void> addBook(Book book) async {
+    await Future.delayed(Duration(seconds: 1));
+    books.add(book);
+    print('책을 추가합니다: "${book.title}" by ${book.author}');
+  }
+
+  Future<void> searchByTitle(String? title) async {
+    await Future.delayed(Duration(seconds: 1));
+    return null;
+}
+
+void main() async{
+ String? title = await searchByTitle();
+    if (title !== null) {
+      print("제목이 null입니다");
+    } 
+    else {
+    print("책을 찾을 수 없습니다");
+  }
+  }}
